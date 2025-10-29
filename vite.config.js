@@ -11,4 +11,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // Allows using "@" as an alias for your "src" folder.
     },
   },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.js',
+  },
 });
