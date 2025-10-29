@@ -1,70 +1,9 @@
 import React from 'react';
 import './PricingPlans.scss';
-import AOS from 'aos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faDesktop,
-  faBoxOpen,
-  faGears,
-  faUserSecret,
-} from '@fortawesome/free-solid-svg-icons';
 import Button from '../../button/Button';
-const PricingPlans = () => {
-  const plans = [
-    {
-      icon: faDesktop,
-      name: 'Free Plan',
-      price: 0,
-      description: [
-        '150 Lorem, Ipsum Dolor.',
-        '20 Lorem Ipsum Dolor Sit.',
-        'Lorem Ipsum Dolor Sit.',
-        'Free Lorem Ipsum Dolor.',
-        'Added Lorem Ipsum Dolor.',
-      ],
-      popular: false,
-    },
-    {
-      icon: faGears,
-      name: 'Standard Plan',
-      price: 85,
-      description: [
-        '150 Lorem, Ipsum Dolor.',
-        '20 Lorem Ipsum Dolor Sit.',
-        'Lorem Ipsum Dolor Sit.',
-        'Free Lorem Ipsum Dolor.',
-        'Added Lorem Ipsum Dolor.',
-      ],
-      popular: false,
-    },
-    {
-      icon: faBoxOpen,
-      name: 'Pro Plan',
-      price: 150,
-      description: [
-        '150 Lorem, Ipsum Dolor.',
-        '20 Lorem Ipsum Dolor Sit.',
-        'Lorem Ipsum Dolor Sit.',
-        'Free Lorem Ipsum Dolor.',
-        'Added Lorem Ipsum Dolor.',
-      ],
-      popular: true,
-    },
-    {
-      icon: faUserSecret,
-      name: 'Ultimate Plan',
-      price: 210,
-      description: [
-        '150 Lorem, Ipsum Dolor.',
-        '20 Lorem Ipsum Dolor Sit.',
-        'Lorem Ipsum Dolor Sit.',
-        'Free Lorem Ipsum Dolor.',
-        'Added Lorem Ipsum Dolor.',
-      ],
-      popular: false,
-    },
-  ];
 
+const PricingPlans = ({ plans }) => {
   return (
     <section
       className="pricing-plans px-10"

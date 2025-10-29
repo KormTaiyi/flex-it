@@ -1,7 +1,5 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react';
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { lazy, Suspense } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import Loading from '../components/loading/Loading';
@@ -16,23 +14,7 @@ const Pages = lazy(() => import('../page/Pages'));
 const Contact = lazy(() => import('../page/Contact'));
 
 const RouterComponent = () => {
-  const [loading, setLoading] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-
-    setLoading(true);
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [location]);
-
-  return loading ? (
-    <Loading />
-  ) : (
+  return (
     <Suspense fallback={<Loading />}>
       <Header />
       <Routes>

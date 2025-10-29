@@ -1,50 +1,9 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faMagnifyingGlass, faChartLine, faMobileAlt, faDatabase,faTable } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 import './service.scss';
 import Button from '../../button/Button';
 
-const ServiceOffer = () => {
-  const serviceOffer = [
-    {
-      icon: <FontAwesomeIcon icon={faCode} />,
-      id: 1,
-      title: "Web Development",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.",
-    },
-    {
-      icon: <FontAwesomeIcon icon={faChartLine} />,
-      id: 2,
-      title: "Digital Marketing",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.",
-    },
-    {
-      icon: < FontAwesomeIcon icon={faTable}/>,
-      id: 3,
-      title: "SaaS Product",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.",
-    },
-    {
-      icon: <FontAwesomeIcon icon={faMobileAlt} />,
-      id: 4,
-      title: "Apps Development",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.",
-    },
-    {
-      icon: <FontAwesomeIcon icon={faMagnifyingGlass} />,
-      id: 5,
-      title: "SEO Services",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.",
-    },
-    {
-      icon: <FontAwesomeIcon icon={faDatabase} />,
-      id: 6,
-      title: "Data Analysis",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque minima commodi, repudiandae facere adipisci voluptatibus corporis nobis perferendis iste.",
-    },
-  ];
-
+const ServiceOffer = ({ serviceOffer }) => {
   return (
     <div className='big-bg px-10'>
       <div className="m-auto py-5 ">

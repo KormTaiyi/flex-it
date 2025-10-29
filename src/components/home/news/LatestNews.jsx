@@ -1,43 +1,11 @@
 import React from 'react';
 import './LatestNews.scss';
-import image1 from '../../../assets/1.jpg';
-import image2 from '../../../assets/2.jpg';
-import image3 from '../../../assets/3.jpg';
 import Button from '../../button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-const LatestNews = () => {
-  const articles = [
-    {
-      date: '05 Oct 2022',
-      category: 'Hosting',
-      author: 'Allan Moorea',
-      title: 'How Litespeed Technology Works To Speed Up Your Site',
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-      link: '#',
-      imageUrl: image1,
-    },
-    {
-      date: '15 Sep 2022',
-      category: 'Web Dev',
-      author: 'Mhmd Amin',
-      title: 'Give Your Website A New Look And Feel With Themes',
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-      link: '#',
-      imageUrl: image2,
-    },
-    {
-      date: '27 Aug 2022',
-      category: 'SEO',
-      author: 'Yusuf Amin',
-      title: 'The Role Of Domain Names In SEO World Explained',
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-      link: '#',
-      imageUrl: image3,
-    },
-  ];
 
+const LatestNews = ({ articles }) => {
   return (
     <section className="latest-news" data-aos="fade-up" data-aos-duration="1000">
       

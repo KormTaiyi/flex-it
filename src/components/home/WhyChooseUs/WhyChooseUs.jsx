@@ -3,45 +3,21 @@ import './why-choose-us.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGgCircle  } from '@fortawesome/free-brands-svg-icons';
 import WhyChoose from '../../../assets/home/why-choose-us.png'
-import AOS from "aos";
 import Button from '../../button/Button';
+import { useNavigate } from 'react-router-dom';
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ fields }) => {
+  const navigate = useNavigate();
   const toAboutUs = () => {
-    window.location.href = '/about';
+    navigate('/about');
   };
 
     const imageHolderRef = useRef(null);
     let currentRotateX = 0;
     let currentRotateY = 0;
-    const fields = [
-        {
-          id: 1,
-          num: "01.",
-          title: "Latest Technologies",
-          description: "We stay ahead of the curve by leveraging the latest technologies to deliver innovative solutions that empower your business."
-        },
-        {
-          id: 2,
-          num: "02.",
-          title: "Unique Solutions",
-          description: "We understand that every business is different, which is why we offer tailored solutions designed to meet your unique challenges."
-        },
-        {
-          id: 3,
-          num: "03.",
-          title: "Powerful Strategies",
-          description: "Success starts with a strong strategy. Our team develops powerful, data-driven strategies that deliver measurable results."
-        },
-      ];
     
     useEffect(() => {
-        AOS.init({
-            once: true,
-          });
-        
         const imageHolder = imageHolderRef.current;
-        let isAnimating = true;
     
         const handleMouseMove = (e) => {
         if (!imageHolder) return;
@@ -54,9 +30,6 @@ const WhyChooseUs = () => {
         currentRotateY = (-x / width) * 60;
     
         imageHolder.style.transform = `rotateX(${currentRotateX}deg) rotateY(${currentRotateY}deg)`;
-    
-        const isCursorRight = x > 0;
-        const isCursorDown = y > 0;
         };
     
         const handleMouseLeave = () => {
@@ -66,20 +39,12 @@ const WhyChooseUs = () => {
         imageHolder.style.transform = `rotateX(0deg) rotateY(0deg)`;
         };
     
-        const animate = () => {
-        if (!isAnimating) return;
-        requestAnimationFrame(animate);
-        };
-    
         if (imageHolder) {
         imageHolder.addEventListener("mousemove", handleMouseMove);
         imageHolder.addEventListener("mouseleave", handleMouseLeave);
         }
     
-        animate();
-    
         return () => {
-        isAnimating = false;
         if (imageHolder) {
             imageHolder.removeEventListener("mousemove", handleMouseMove);
             imageHolder.removeEventListener("mouseleave", handleMouseLeave);
@@ -100,7 +65,7 @@ const WhyChooseUs = () => {
                   <h6><FontAwesomeIcon icon={faGgCircle} />&nbsp;&nbsp;Why Choose Us&nbsp;&nbsp;<FontAwesomeIcon icon={faGgCircle} /></h6>
               </div>
               <div>
-                  <h1 className='font-lg'>Why Our Customers Choose <span style={{ color: "#09AFF4" }}>Working</span> With Us </h1>
+                  <h1 className='font-lg'>Why Our Customers Choose <span className="highlight">Working</span> With Us </h1>
               </div>
               <div>
                   <p className='font-sizePx18 mt-4'>Our customers choose us because we deliver more than just services – we provide solutions that drive results.</p>
