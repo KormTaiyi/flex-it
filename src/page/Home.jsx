@@ -1,25 +1,24 @@
-
-import CarouselCard from '../components/home/carouselCard/CarouselCard';
-import MainBanner from '../components/home/main-banner/Banner';
-import WhyChooseUs from '../components/home/Why-choose-us/Why-choose-us'
-import LatestNews from '../components/home/News/LatestNews'
-import PricingPlans from '../components/home/PricingPlans/PricingPlans'
-import RunningNum from '../components/home/Runing-Number/RunningNum';
-import ServiceOffer from '../components/ome/ServiceOffer/ServiceOffer';
-import TestiMo from '../components/home/Testimonial/TestiMo';
-import Scroll from '../components/scroll-up/Scroll';
-import HomeAboutUs from '../components/home/about-us/about-us';
+import CarouselCard from "../components/home/carouselCard/CarouselCard";
+import WhyChooseUs from "../components/home/WhyChooseUs/WhyChooseUs.jsx";
+import PricingPlans from "../components/home/PricingPlans/PricingPlans";
+import RunningNum from "../components/home/Running-Number/RunningNum.jsx";
+import ServiceOffer from "../components/home/ServiceOffer/ServiceOffer.jsx";
+import Scroll from "../components/scroll-up/Scroll.jsx";
+import HomeAboutUs from "../components/home/about-us/About-us.jsx";
+import TestiMo from "../components/home/testimonial/TestiMo.jsx";
+import LatestNews from "../components/home/news/LatestNews.jsx";
+import MainBanner from "../components/home/MainBanner/Banner.jsx";
 const HomePage = () => {
   return (
     <>
       <div>
-        <MainBanner/>
-        <ServiceOffer/>
-        <HomeAboutUs/>
-        <WhyChooseUs/>
+        <MainBanner />
+        <ServiceOffer />
+        <HomeAboutUs />
+        <WhyChooseUs />
         <CarouselCard />
-        <RunningNum/>
-        <TestiMo/>
+        <RunningNum />
+        <TestiMo />
         <PricingPlans />
         <LatestNews />
         <Scroll />

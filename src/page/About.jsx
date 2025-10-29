@@ -1,4 +1,4 @@
-import LatestNews from "../components/home/News/LatestNews";
+import LatestNews from "../components/home/news/LatestNews";
 import HomeAboutUs from "../components/home/about-us/About-us";
 import TestiMo from "../components/home/testimonial/TestiMo";
 import PropHeader from "../components/home/PropHeader/PropHeader";
