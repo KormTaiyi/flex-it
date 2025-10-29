@@ -2,9 +2,9 @@ import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Header from '../component/header/Header';
-import Footer from '../component/footer/Footer';
-import Loading from '../component/loading/Loading';
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import Loading from '../components/loading/Loading';
 
 // Lazy load pages for code-splitting
 const Home = lazy(() => import('../page/Home'));
