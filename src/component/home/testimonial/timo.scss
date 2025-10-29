@@ -1,0 +1,42 @@
+.swipies{
+    background-image: url('../../../assets/1bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .swip-black{
+        opacity: 0.7;
+        background-color: black;
+        padding: 0 5rem;
+    }
+}
+.textPo{
+  text-align: center;
+  h1{
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 600px;
+  }
+}
+.myySwiper {
+    .myswip {
+        height: 400px;
+        align-content: center;
+        padding: 0 100px;
+        width: 70%;
+    }
+    .al-center {
+      display: flex;
+    }
+    h5 {
+      margin: 2rem 0;
+    }
+  }
+  
+  // Media query for small screens
+  @media (max-width: 768px) {
+    .myySwiper {
+      width: 100%; // Full width for small screens
+      padding: 0 30px; // Adjust padding for smaller screens
+    }
+  }
+  

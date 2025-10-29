@@ -1,0 +1,68 @@
+@use '../../styles/variables' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 0px 85px 0px 85px;
+  z-index: 1000;
+  background-color: $primary-color;
+  transition: all 0.3s ease;
+  @media (max-width: 800px) {
+    padding: 0px 20px 0px 20px;
+  }
+
+  &sticky{
+    position: static;
+    background-color: ($primary-color, 10%);
+  }
+  .navbar {
+    .navbar-brand img {
+      max-height: 50px;
+    }
+
+    .navbar-toggler {
+      border: none;
+      background: transparent;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      .custom-btn {
+        padding: 0;
+        width: 40px;
+      }
+
+      .nav-item {
+        font-weight: 800;
+        @media (min-width: 768px) {
+          margin: 0 1rem;
+        }
+
+        .nav-link {
+          color: white;
+          text-decoration: none;
+
+          &.active {
+            font-weight: bold;
+            color: var(--bs-primary);
+          }
+
+          &:hover {
+            color: var(--bs-primary);
+          }
+        }
+      }
+    }
+  }
+}
