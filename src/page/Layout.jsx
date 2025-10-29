@@ -1,5 +1,5 @@
 import React from 'react';
-import Scroll from "../component/scroll-up/Scroll";
+import Scroll from "../components/scroll-up/Scroll";
 
 const Layout = () => {
   return (

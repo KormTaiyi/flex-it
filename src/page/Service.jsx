@@ -1,5 +1,5 @@
-import Scroll from "../component/scroll-up/Scroll";
-import FullService from "../component/services/FullService";
+import Scroll from "../components/scroll-up/Scroll";
+import FullService from "../component/sservices/FullService";
 const Service = () => {
   return (
     <div>

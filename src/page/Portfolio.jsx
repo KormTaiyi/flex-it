@@ -1,10 +1,10 @@
 import React from 'react';
-import ImageBanner from '../component/portfolio/image-banner/Image-banner';
-import ProjectGoal from '../component/portfolio/project-goal/project-goal';
-import SideCard from '../component/portfolio/side-card/Side-card';
-import Scroll from "../component/scroll-up/Scroll";
-import ContactBanner from '../component/portfolio/contact-banner/Contact-banner';
-import PropHeader from "../component/home/PropHeader/PropHeader";
+import ImageBanner from '../components/portfolio/image-banner/Image-banner';
+import ProjectGoal from '../components/portfolio/project-goal/project-goal';
+import SideCard from '../components/portfolio/side-card/Side-card';
+import Scroll from "../components/scroll-up/Scroll";
+import ContactBanner from '../components/portfolio/contact-banner/Contact-banner';
+import PropHeader from "../components/home/PropHeader/PropHeader";
 
 
 const Portfolio = () => {

@@ -1,8 +1,8 @@
-import Scroll from "../component/scroll-up/Scroll";
-import Branch from "../component/contact-us/branch/Branch";
-import Map from "../component/contact-us/map/Map";
-import Form from "../component/contact-us/contact-form/Form";
-import PropHeader from "../component/home/PropHeader/PropHeader";
+import Scroll from "../components/scroll-up/Scroll";
+import Branch from "../components/contact-us/branch/Branch";
+import Map from "../components/contact-us/map/Map";
+import Form from "../components/contact-us/contact-form/Form";
+import PropHeader from "../components/home/PropHeader/PropHeader";
 
 const ContactPage = () => {
   return (

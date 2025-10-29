@@ -1,8 +1,8 @@
-import LatestNews from "../component/home/News/LatestNews";
-import HomeAboutUs from "../component/home/about-us/About-us";
-import TestiMo from "../component/home/testimonial/TestiMo";
-import PropHeader from "../component/home/PropHeader/PropHeader";
-import Scroll from "../component/scroll-up/Scroll";
+import LatestNews from "../components/home/News/LatestNews";
+import HomeAboutUs from "../components/home/about-us/About-us";
+import TestiMo from "../components/home/testimonial/TestiMo";
+import PropHeader from "../components/home/PropHeader/PropHeader";
+import Scroll from "../components/scroll-up/Scroll";
 
 const AboutPage = () => {
   return (
