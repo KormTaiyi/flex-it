@@ -23,36 +23,36 @@ const PricingPlans = ({ plans }) => {
           <Button>See All Plans →</Button>
         </div>
       </div>
-      <div className="container">
-        <div className="plans-container row">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`plan-card col-md-6 mb-4 col-xl-4 col-lg-4 col-xxl-4  ${plan.popular ? 'popular' : ''}`}
-            >
-              <div className="plan-header">
-                {plan.popular && (
-                  <span className="badge">Most Popular Plan</span>
-                )}
-              </div>
-              <h6 className="icons-solid">
-                <FontAwesomeIcon icon={plan.icon} />
-              </h6>
-              <h3 className="plan-title">{plan.name}</h3>
-              <p className="price">
-                ${plan.price}
-                <span>Per Project</span>
-              </p>
-              <ul className="plan-features">
-                {plan.description.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-              <button className="select-plan">Select Plan</button>
+      {/* <div className="container"> */}
+      <div className="plans-container row">
+        {plans.map((plan, index) => (
+          <div
+            key={index}
+            className={`plan-card  ${plan.popular ? 'popular' : ''}`}
+          >
+            <div className="plan-header">
+              {plan.popular && (
+                <span className="badge">Most Popular Plan</span>
+              )}
             </div>
-          ))}
-        </div>
+            <h6 className="icons-solid">
+              <FontAwesomeIcon icon={plan.icon} />
+            </h6>
+            <h3 className="plan-title">{plan.name}</h3>
+            <p className="price">
+              ${plan.price}
+              <span>Per Project</span>
+            </p>
+            <ul className="plan-features">
+              {plan.description.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+            <button className="select-plan">Select Plan</button>
+          </div>
+        ))}
       </div>
+      {/* </div> */}
     </section>
   );
 };

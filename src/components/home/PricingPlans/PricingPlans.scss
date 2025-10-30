@@ -9,8 +9,6 @@ $button-border: #3b82f6;
 $button-text: #ffffff;
 $badge-bg: #3b83f6e3;
 
-
-
 .pricing-plans {
   text-align: center;
   padding: 64px 16px;
@@ -42,17 +40,15 @@ $badge-bg: #3b83f6e3;
   }
 
   .plans-container {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 columns by default
+    gap: 16px; // add some gap between items
 
     .plan-card {
       padding: 25px;
       border-radius: 8px;
-      width: 300px;
-      height: auto;
+      width: 100%;
       text-align: center;
-      position: relative;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
       border: 1px solid #3b82f6;
@@ -62,21 +58,21 @@ $badge-bg: #3b83f6e3;
       }
 
       &.popular {
-        background-color: $highlight-bg; // Blue background for popular cards
-        border-color: $highlight-bg; // Same as background for seamless design
+        background-color: $highlight-bg;
+        border-color: $highlight-bg;
 
         .select-plan {
-            background-color: $primary-color; // White button
-            color: $highlight-bg; // Blue text
-            border: 2px solid $primary-color; // White border
+          background-color: $primary-color;
+          color: $highlight-bg;
+          border: 2px solid $primary-color;
 
-            &:hover {
-                background-color: $highlight-bg; // Blue on hover
-                color: $primary-color; // White text on hover
-                border: 2px solid $primary-color; // White border stays consistent
-            }
+          &:hover {
+            background-color: $highlight-bg;
+            color: $primary-color;
+            border: 2px solid $primary-color;
+          }
         }
-    }
+      }
       .plan-header {
         position: relative;
 
@@ -123,78 +119,76 @@ $badge-bg: #3b83f6e3;
       }
 
       .select-plan {
-        background-color: $button-bg; // Transparent
-        border: 2px solid $button-border; // Blue
-        color: $accent-color; // Use accent color (blue) for the text
+        background-color: $button-bg;
+        border: 2px solid $button-border;
+        color: $accent-color;
         padding: 12px 24px;
         border-radius: 8px;
         cursor: pointer;
         font-weight: bold;
         transition: background-color 0.3s ease, color 0.3s ease;
         margin-top: 20px;
-      
+
         &:hover {
-            background-color: $button-border; // Blue background
-            color: $primary-color; // White text on hover
+          background-color: $button-border;
+          color: $primary-color;
         }
       }
     }
   }
-}
 
-@media (max-width: 1024px) {
-  .plans-container {
-    flex-direction: row;
-    gap: 12px;
-  }
+  @media (max-width: 1024px) {
+    .plans-container {
+      grid-template-columns: repeat(2, 1fr); // 2 columns for medium screens
+    }
 
-  .plan-card {
-    width: 48%;
-  }
-}
-
-@media (max-width: 768px) {
-  .plans-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .plan-card {
-    width: 80%;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 28px;
-  }
-
-  .section-description {
-    font-size: 16px;
-  }
-
-  .plan-card {
-    padding: 16px;
-    width: 100%;
-  }
-
-  .price {
-    font-size: 32px;
-
-    span {
-      font-size: 14px;
+    .plan-card {
+      width: 100%;
     }
   }
 
-  .plan-title {
-    font-size: 20px;
+  @media (max-width: 768px) {
+    .plans-container {
+      grid-template-columns: 1fr; // 1 column for smaller screens
+    }
+
+    .plan-card {
+      width: 100%;
+    }
   }
 
-  .plan-features {
-    font-size: 12px;
-  }
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 28px;
+    }
 
-  .select-plan {
-    padding: 10px 20px;
+    .section-description {
+      font-size: 16px;
+    }
+
+    .plan-card {
+      padding: 16px;
+      width: 100%;
+    }
+
+    .price {
+      font-size: 32px;
+
+      span {
+        font-size: 14px;
+      }
+    }
+
+    .plan-title {
+      font-size: 20px;
+    }
+
+    .plan-features {
+      font-size: 12px;
+    }
+
+    .select-plan {
+      padding: 10px 20px;
+    }
   }
 }
