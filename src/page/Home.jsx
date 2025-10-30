@@ -1,4 +1,4 @@
-import CarouselCard from "../components/home/CarouselCard/CarouselCard.jsx";
+import CarouselCard from "../components/home/carouselCard/CarouselCard.jsx";
 import WhyChooseUs from "../components/home/WhyChooseUs/WhyChooseUs.jsx";
 import PricingPlans from "../components/home/PricingPlans/PricingPlans.jsx";
 import RunningNum from "../components/home/Running-Number/RunningNum.jsx";

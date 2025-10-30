@@ -1,5 +1,5 @@
 import LatestNews from "../components/home/news/LatestNews";
-import TestiMo from "../components/home/testimonial/TestiMo";
+import TestiMo from "../components/home/Testimonial/TestiMo";
 import PropHeader from "../components/home/PropHeader/PropHeader";
 import Scroll from "../components/scroll-up/Scroll";
 import HomeAboutUs from "../components/home/about-us/AboutUs.jsx";
